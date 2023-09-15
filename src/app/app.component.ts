@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tarea-tdd';
+
+  constructor(){
+    
+  }
+  calcularFactorial(numero:number){
+    return -1
+  }
 }
