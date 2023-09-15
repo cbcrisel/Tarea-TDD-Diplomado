@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tarea-tdd';
+  numero: number=0;
+  resultado: number=0;
   
   calcularFactorial(numero:number):number{
     if (numero === 0 || numero === 1) {
@@ -14,5 +16,9 @@ export class AppComponent {
     } else {
       return numero * this.calcularFactorial(numero - 1);
     }
+  }
+
+  submit(){
+    this.resultado=this.calcularFactorial(this.numero)
   }
 }
