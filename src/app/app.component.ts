@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tarea-tdd';
-
-  constructor(){
-    
-  }
-  calcularFactorial(numero:number){
-    return -1
+  
+  calcularFactorial(numero:number):number{
+    if (numero === 0 || numero === 1) {
+      return 1;
+    } else {
+      return numero * this.calcularFactorial(numero - 1);
+    }
   }
 }
